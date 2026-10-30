@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PawClear — Know before you go</title>
+<style>
+  :root{--paper:#f4f1ea;--ink:#1b1916;--muted:#6d675d;--line:#d8d1c4;--teal:#2f5d55;--clay:#a8442c}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  .wrap{max-width:760px;margin:0 auto;padding:64px 24px 88px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;letter-spacing:.02em}
+  .dot{width:32px;height:32px;border-radius:10px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px}
+  h1{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:56px;line-height:1.02;margin:34px 0 12px;font-weight:600;letter-spacing:-.01em}
+  .lede{font-size:20px;color:#3c3830;max-width:34ch}
+  .pill{display:inline-block;margin-top:22px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+  h2{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:44px 0 10px}
+  ul{padding-left:18px;margin:0}
+  li{margin:7px 0;max-width:58ch}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px}
+  .card{background:#fbf9f4;border:1px solid var(--line);border-radius:4px;padding:16px 18px}
+  .card b{display:block;font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:19px;margin-bottom:4px}
+  .card span{font-size:14px;color:var(--muted)}
+  footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  a{color:var(--teal)}
+  @media (max-width:560px){.cols{grid-template-columns:1fr}h1{font-size:44px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><span class="dot">P</span> PAWCLEAR</div>
+
+  <h1>Know before<br>you go.</h1>
+  <p class="lede">Vaccination records, kennel windows and the earliest legal travel date — in one clear answer.</p>
+  <div class="pill">Coming soon to the App Store</div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Checks each requirement against its own validity window: kennel, daycare, groomer, airline, border.</li>
+    <li>Calculates the earliest legal travel date, including the rabies waiting period, titer timing and age limits.</li>
+    <li>Produces one A4 record card with a QR code for a kennel desk or a vet.</li>
+    <li>Loads a facility's exact rules by scanning the QR code it prints at the front desk.</li>
+  </ul>
+
+  <h2>Built to be private</h2>
+  <div class="cols">
+    <div class="card"><b>No account</b><span>Nothing to sign up for, nothing to remember.</span></div>
+    <div class="card"><b>On your device</b><span>Records stay in the app. No server, no analytics.</span></div>
+    <div class="card"><b>No ads</b><span>No advertising SDK and no data sold.</span></div>
+    <div class="card"><b>Offline</b><span>Works at a border crossing with no signal.</span></div>
+  </div>
+
+  <h2>Details</h2>
+  <p style="font-size:14px;color:var(--muted);max-width:62ch">PawClear keeps records and tracks requirements. It does not diagnose or treat. The authority, airline, veterinarian or facility has the final say. The PDF is a record summary, not an official health certificate or pet passport.</p>
+
+  <footer>
+    <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="mailto:support@serdarozdemir.dev">support@serdarozdemir.dev</a><br>
+    © 2026 Serdar Ozdemir
+  </footer>
+</div>
+</body>
+</html>
