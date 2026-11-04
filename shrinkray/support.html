@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shrinkray · Support</title>
+<style>
+body{margin:0;background:#f5f5fa;color:#171a22;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:56px 24px 96px}
+h1{font-size:30px;letter-spacing:-.02em;margin:0 0 6px}
+h2{font-size:18px;margin:30px 0 8px}
+p,li{color:#3b3f4a}
+.meta{color:#6f7480;font-size:13.5px;margin-bottom:30px}
+a{color:#4b3fd0}
+nav{margin-bottom:28px;font-size:14px}
+nav a{margin-right:16px}
+dt{font-weight:600;margin-top:16px}
+dd{margin:4px 0 0 0;color:#3b3f4a}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="index.html">Shrinkray</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
+
+<h1>Support</h1>
+<p class="meta">Shrinkray for Mac · version 1.0</p>
+
+<p>Write to <a href="mailto:yasarserdarozdemir@gmail.com">yasarserdarozdemir@gmail.com</a>. Include your macOS version (Apple menu → About This Mac) and, if a file misbehaved, what format it was in. A human answers, usually within two working days.</p>
+
+<h2>Common questions</h2>
+<dl>
+  <dt>The compressed file is not as small as I expected.</dt>
+  <dd>A size limit is a ceiling, not a target: the engine keeps the highest quality that still fits under it. If the source is already small — a screenshot, a line drawing — there may be nothing to win, and the row says "no change" instead of writing a heavier copy.</dd>
+
+  <dt>Where do the compressed files go?</dt>
+  <dd>To the folder shown under "Save to" in the sidebar, with a suffix appended to the name (<code>photo.jpg</code> becomes <code>photo-listing.jpg</code>). Your originals are never modified. Right-click a finished row → Show in Finder.</dd>
+
+  <dt>Why does the app ask for a folder?</dt>
+  <dd>macOS sandboxes every App Store app. Shrinkray can read the files you hand it and write to one folder you pick; it cannot see the rest of your disk. The choice is remembered across launches.</dd>
+
+  <dt>Does it upload my images?</dt>
+  <dd>No. Everything runs on your Mac, offline. See the <a href="privacy.html">privacy policy</a>.</dd>
+
+  <dt>How do I restore my purchase on a new Mac?</dt>
+  <dd>Open Shrinkray → Settings (⌘,) → Restore Purchases. The unlock is tied to your Apple account, not to the machine.</dd>
+
+  <dt>Why is a PNG bigger after "compressing"?</dt>
+  <dd>PNG has no quality setting, so a size limit is met by reducing pixels; when even that does not help, the engine leaves your original untouched rather than hand back a heavier file.</dd>
+</dl>
+
+<h2>Keyboard</h2>
+<p>⌘O add images · ⇧⌘O change output folder · ⌘, settings. The menu bar icon compresses whatever image is on the clipboard with your current preset.</p>
+</div>
+</body>
+</html>
