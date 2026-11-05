@@ -29,6 +29,9 @@ hr{border:0;border-top:1px solid #e2ded6;margin:36px 0}
 <h2>What Proofsheet does</h2>
 <p>Proofsheet captures photos, location, time and a noise reading, seals each record with a SHA-256 hash that includes the previous record, and produces a PDF report. The seal is a mathematical check that the record and its file have not changed since capture. It is not a legal certification, a notarisation, or a guarantee that a court will admit the record.</p>
 
+<h2>Network time anchor</h2>
+<p>When enabled, the app compares the device clock with the public <code>Date</code> header of an HTTPS request to <code>apple.com</code> at export. The result is a convenience check, not a qualified electronic timestamp, and it does not replace a notary or a timestamp authority.</p>
+
 <h2>Not legal advice</h2>
 <p>The app and its reports are documentation tools. They do not provide legal advice. For a dispute, tenancy, employment or insurance matter, consult a qualified professional in your jurisdiction.</p>
 

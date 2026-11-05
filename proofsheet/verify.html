@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verify a report · Proofsheet</title>
+<style>
+body{margin:0;background:#f7f6f3;color:#17181c;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:56px 24px 96px}
+h1{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:34px;letter-spacing:-.02em;margin:0 0 6px}
+h2{font-size:19px;margin:34px 0 8px;letter-spacing:-.01em}
+p,li{color:#3a3b40}
+.meta{color:#767981;font-size:13.5px;margin-bottom:34px}
+a{color:#a8442c}
+nav{margin-bottom:28px;font-size:14px}
+nav a{margin-right:16px}
+hr{border:0;border-top:1px solid #e2ded6;margin:36px 0}
+code{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;background:#ece7dd;padding:1px 5px;border-radius:3px;word-break:break-all}
+.box{background:#fbf9f4;border:1px solid #d8d1c4;border-radius:8px;padding:16px 18px;margin:18px 0}
+.box b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d675d;margin-bottom:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="index.html">Proofsheet</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
+
+<h1>Verify a report</h1>
+<p class="meta">Proofsheet · chain head and record count from a QR code</p>
+
+<p>A Proofsheet PDF carries a QR code with the case's chain head and record count. This page shows the values from that code so you can compare them with the report in front of you. It does not receive the files, and it cannot verify them for you.</p>
+
+<div class="box">
+  <b>Chain head</b>
+  <code id="head">—</code>
+</div>
+<div class="box">
+  <b>Records</b>
+  <code id="count">—</code>
+</div>
+
+<h2>What the chain head means</h2>
+<p>Each record is sealed with a SHA-256 hash over its canonical fields: case ID, record ID, kind, capture time, coordinates, altitude, accuracy, heading, file name, file hash, note and the previous record's seal. The first record uses sixty-four zeros as the previous seal. The last record's seal is the chain head.</p>
+<p>If one field or one file changes, that record no longer matches its seal and every later seal no longer matches the next record's previous seal. The report shows the same head on its verification page.</p>
+
+<h2>How to check a record</h2>
+<ol>
+  <li>Open the PDF's verification page and compare the chain head above with the printed head.</li>
+  <li>For a specific file, recompute its SHA-256 and compare it with the file hash printed on that record's page.</li>
+  <li>Recompute the record's canonical SHA-256 in the order above, using the previous seal printed on the page. It must equal the record's printed seal.</li>
+</ol>
+<p>The seal proves the record has not changed since it was written. It is not a notarisation, legal advice, or a guarantee that a court will admit the record. The network time anchor, when present, is a comparison with a public HTTPS server at export, not a qualified timestamp.</p>
+
+<h2>A note on the QR</h2>
+<p>The QR contains only the chain head and the number of records. It never contains photos, coordinates or notes. Scanning it opens this page in your browser; nothing is uploaded by Proofsheet.</p>
+
+<hr>
+<p class="meta">Proofsheet is an independent app by Yasar Serdar Ozdemir. Questions: <a href="mailto:yasarserdarozdemir@gmail.com">yasarserdarozdemir@gmail.com</a></p>
+</div>
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var head = params.get('head') || '—';
+    var count = params.get('n') || '—';
+    document.getElementById('head').textContent = head;
+    document.getElementById('count').textContent = count;
+  })();
+</script>
+</body>
+</html>

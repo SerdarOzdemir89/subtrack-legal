@@ -38,6 +38,9 @@ hr{border:0;border-top:1px solid #e2ded6;margin:36px 0}
 <h2>Microphone</h2>
 <p>The noise log uses the microphone to measure an approximate sound pressure level. Audio is processed in memory and reduced to numbers; it is not recorded to a file and is not uploaded. The reading is not a certified sound level meter.</p>
 
+<h2>Network time anchor</h2>
+<p>If you leave the export setting on, Proofsheet makes a HEAD request to <code>apple.com</code> when you export a report and reads the public <code>Date</code> response header. No case content, photo, note, coordinate or hash is sent. The returned time and a local proof hash are stored in the case and printed in the report. This is a clock comparison, not a qualified timestamp. You can turn it off in Settings → Report.</p>
+
 <h2>Purchases</h2>
 <p>Proofsheet Pro is sold through Apple's in-app purchase system. Apple provides the app with a signed transaction so Pro features can be unlocked. We do not receive your name, email address, or payment details. Apple's privacy policy governs the transaction.</p>
 
