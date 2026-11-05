@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support · Proofsheet</title>
+<style>
+body{margin:0;background:#f7f6f3;color:#17181c;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:56px 24px 96px}
+h1{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:34px;letter-spacing:-.02em;margin:0 0 6px}
+h2{font-size:19px;margin:34px 0 8px;letter-spacing:-.01em}
+p,li{color:#3a3b40}
+.meta{color:#767981;font-size:13.5px;margin-bottom:34px}
+a{color:#a8442c}
+nav{margin-bottom:28px;font-size:14px}
+nav a{margin-right:16px}
+hr{border:0;border-top:1px solid #e2ded6;margin:36px 0}
+code{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;background:#ece7dd;padding:1px 5px;border-radius:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="index.html">Proofsheet</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
+
+<h1>Support</h1>
+<p class="meta">Proofsheet for iOS · Effective 5 November 2026</p>
+
+<p>Proofsheet captures a photo, its location and its time, seals the record, and turns a case into one PDF report. Everything stays on your device.</p>
+
+<h2>How sealing works</h2>
+<p>Each record gets a SHA-256 hash. The hash is calculated from the record's case ID, record ID, kind, capture time, coordinates, altitude, accuracy, heading, file name, file hash, note, and the previous record's seal. The first record uses sixty-four zeros as its previous seal. Change one field or one file, and that record no longer matches its seal.</p>
+<p>To check a record, open it and tap <b>Verify seal</b>. To check the whole case, open the case: the green strip says the chain is verified and how many records were checked.</p>
+
+<h2>Why does the app say the chain is broken?</h2>
+<p>The file or the metadata no longer matches the seal that was written at capture. This can happen if a file was replaced outside the app, if the case was restored from an incomplete backup, or if the record was edited. The app reports the first record that fails; it does not repair or hide the change.</p>
+
+<h2>Can I export a record?</h2>
+<p>Yes. Open a photo record and use the share button to export the JPEG, or open a case and choose <b>Export PDF</b> to build a report with a cover, one page per record, and a verification page. Free reports carry a watermark; Pro reports do not.</p>
+
+<h2>What is included in Pro?</h2>
+<p>Unlimited cases and records, PDF reports without a watermark, and the noise log with calibration. The free plan includes one case and five records per case; capturing is always free.</p>
+
+<h2>How do I restore a purchase?</h2>
+<p>Open Settings → Proofsheet Pro → Restore purchases, or tap Restore on the purchase screen. Use the same Apple Account that bought Pro. Deleting and reinstalling the app does not cancel a subscription.</p>
+
+<h2>How do I cancel the yearly plan?</h2>
+<p>Subscriptions are managed by Apple: Settings on your iPhone → your name → Subscriptions → Proofsheet Pro → Cancel. Cancelling at least 24 hours before the period ends avoids the next charge. Deleting the app does not cancel it.</p>
+
+<h2>Location, camera and microphone</h2>
+<p>Location is optional; a record can be sealed without coordinates. Camera access is needed to capture. Microphone access is needed only for the noise log. All three can be changed in iOS Settings → Proofsheet.</p>
+
+<h2>Where is my data?</h2>
+<p>Cases, photos and seals are stored in the app's container on this device. There is no account and no server. Removing the app removes the data; export any report you need first. Settings → Delete all data removes every case and file.</p>
+
+<h2>Contact</h2>
+<p>Send the app version, your iOS version, and what you expected to happen to <a href="mailto:yasarserdarozdemir@gmail.com">yasarserdarozdemir@gmail.com</a>. Please do not send sealed evidence files unless we ask for them.</p>
+
+<hr>
+<p class="meta">Proofsheet is an independent app by Yasar Serdar Ozdemir.</p>
+</div>
+</body>
+</html>
